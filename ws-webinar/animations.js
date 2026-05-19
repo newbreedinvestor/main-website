@@ -37,16 +37,33 @@ if (calendarToggle && calendarDropdown) {
   });
 }
 
-// Calendar links — hardcoded to Tuesday May 12, 2026 6 PM ET (bump these when scheduling next webinar)
+// Calendar links — auto-target the upcoming Tuesday 6 PM ET (rolls to next week once Tue 6 PM ET passes)
 (function() {
   const gcalLink = document.getElementById('gcal-link');
   if (!gcalLink) return; // Only run on thank-you page
 
-  const year  = '2026';
-  const month = '05';
-  const date  = '12';
+  // Compute upcoming Tuesday in America/New_York, regardless of visitor's local TZ
+  const fmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', hour12: false, weekday: 'short'
+  });
+  const parts = Object.fromEntries(fmt.formatToParts(new Date()).map(p => [p.type, p.value]));
+  const dowMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const etDow = dowMap[parts.weekday];
+  const etHour = parseInt(parts.hour, 10);
+  let daysUntil = (2 - etDow + 7) % 7;
+  if (etDow === 2 && etHour >= 18) daysUntil = 7; // past Tue 6 PM ET → next week
 
-  // Bump this when scheduling the next webinar
+  const target = new Date(Date.UTC(
+    parseInt(parts.year, 10),
+    parseInt(parts.month, 10) - 1,
+    parseInt(parts.day, 10) + daysUntil
+  ));
+  const year  = target.getUTCFullYear().toString();
+  const month = String(target.getUTCMonth() + 1).padStart(2, '0');
+  const date  = String(target.getUTCDate()).padStart(2, '0');
+
   const zoomUrl = 'https://us06web.zoom.us/j/86932176429?pwd=Zpd2mQ9R6tNs11Z8ClNfPwaNRBo9qO.1';
   const meetingId = '869 3217 6429';
 
