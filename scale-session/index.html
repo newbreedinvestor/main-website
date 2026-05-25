@@ -479,6 +479,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 .ss-proof h2 {
   font-size: clamp(1.5rem, 2.8vw, 2rem);
@@ -492,13 +493,14 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   gap: 18px;
 }
 .ss-proof-card {
-  padding: 28px 24px;
+  padding: 24px;
   border-radius: 18px;
   background: var(--dark-card);
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.08);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s;
+  text-align: left;
 }
 .ss-proof-card:hover { transform: translateY(-5px); border-color: rgba(244,101,48,0.25); }
 .ss-proof-card::after {
@@ -511,15 +513,25 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   transition: opacity 0.3s;
 }
 .ss-proof-card:hover::after { opacity: 1; }
-.ss-proof-name {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-white);
-  margin-bottom: 4px;
+.ss-proof-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
 }
-.ss-proof-market {
-  font-size: 0.72rem;
+.ss-proof-avatar-img {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.ss-proof-person-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-white);
+}
+.ss-proof-tag {
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--orange);
   background: rgba(244,101,48,0.1);
@@ -527,10 +539,20 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   padding: 2px 10px;
   border-radius: 6px;
   display: inline-block;
-  margin-bottom: 14px;
+  margin-top: 3px;
 }
-.ss-proof-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
-.ss-proof-card p strong { color: var(--orange); }
+.ss-proof-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+.ss-proof-card-body {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
 
 /* Homework */
 .ss-homework {
@@ -538,7 +560,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   color: var(--text-dark);
   padding: 56px 24px;
 }
-.ss-homework-inner { max-width: 660px; margin: 0 auto; }
+.ss-homework-inner { max-width: 660px; margin: 0 auto; text-align: center; }
 .ss-homework h2 {
   font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 800;
@@ -569,6 +591,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   font-size: 0.95rem;
   color: var(--text-dark-muted);
   line-height: 1.6;
+  text-align: left;
 }
 .ss-homework-list li strong { color: var(--text-dark); }
 .ss-hw-icon { flex-shrink: 0; font-size: 1.1rem; margin-top: 1px; }
@@ -682,19 +705,37 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
     <h2 class="reveal">A few quick wins from this system</h2>
     <div class="ss-proof-grid">
       <div class="ss-proof-card reveal">
-        <div class="ss-proof-name">Teagan Trapp</div>
-        <span class="ss-proof-market">Canada &mdash; Virtual Wholesaling</span>
-        <p>6 months cold&#8209;calling generic data, <strong>0 deals</strong>. Switched to niche probate + AI follow&#8209;up. Stacked <strong>~$100K in assignments</strong> and quit his factory job in 2025.</p>
+        <div class="ss-proof-header">
+          <img class="ss-proof-avatar-img" src="../images/teagan-trapp.jpg" alt="Teagan Trapp">
+          <div>
+            <div class="ss-proof-person-name">Teagan Trapp</div>
+            <span class="ss-proof-tag">Canada &mdash; Virtual Wholesaling</span>
+          </div>
+        </div>
+        <div class="ss-proof-card-title">~$100K in Assignments, Zero Ad Spend</div>
+        <div class="ss-proof-card-body">6 months cold&#8209;calling generic data, 0 deals. Switched to niche probate + AI follow&#8209;up. Stacked ~$100K in assignments and quit his factory job in 2025.</div>
       </div>
       <div class="ss-proof-card reveal reveal-delay-1">
-        <div class="ss-proof-name">Carrie Tyler</div>
-        <span class="ss-proof-market">Wholesaling / Flipping</span>
-        <p>Texted foreclosure leads, let AI book the appointment. Closed a <strong>$60K profit flip</strong> &mdash; on Cinco de Mayo, which also turned out to be closing day.</p>
+        <div class="ss-proof-header">
+          <img class="ss-proof-avatar-img" src="../images/Carrie.jpeg" alt="Carrie Tyler">
+          <div>
+            <div class="ss-proof-person-name">Carrie Tyler</div>
+            <span class="ss-proof-tag">Wholesaling / Flipping</span>
+          </div>
+        </div>
+        <div class="ss-proof-card-title">$60K Flip Closed on Cinco de Mayo</div>
+        <div class="ss-proof-card-body">Texted foreclosure leads, let AI book the appointment. Closed a $60K profit flip &mdash; on Cinco de Mayo, which also turned out to be closing day.</div>
       </div>
       <div class="ss-proof-card reveal reveal-delay-2">
-        <div class="ss-proof-name">Manny Madrid</div>
-        <span class="ss-proof-market">Wholesaling &mdash; W2 + Part&#8209;Time</span>
-        <p>60 days in, AI texting after his 9&#8209;5, he called the appointments. <strong>Locked and assigned a $30K deal</strong> before he even started the email campaigns.</p>
+        <div class="ss-proof-header">
+          <img class="ss-proof-avatar-img" src="../images/Nick Patel.jpg" alt="Nick Patel">
+          <div>
+            <div class="ss-proof-person-name">Nick Patel</div>
+            <span class="ss-proof-tag">Lead OS &mdash; Foreclosure</span>
+          </div>
+        </div>
+        <div class="ss-proof-card-title">Two Foreclosure Sellers on the Hook</div>
+        <div class="ss-proof-card-body">Got two sellers on the hook from Lead OS, we have been following up for about a month &mdash; both leads are in foreclosure.</div>
       </div>
     </div>
   </div>
