@@ -372,6 +372,14 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   color: var(--text-dark);
 }
 .testimonial-body { font-size: 0.88rem; color: var(--text-dark-muted); line-height: 1.65; }
+.booked-caption {
+  font-size: 0.9rem;
+  color: var(--text-dark-muted);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 20px auto 0;
+  font-style: italic;
+}
 
 /* ============================================
    4. WHAT WILL HAPPEN
@@ -600,17 +608,18 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   <div class="booked-testimonial-inner">
     <p class="section-eyebrow reveal">Success Stories</p>
     <h2 class="reveal">What this can look like when it works</h2>
-    <div class="testimonial-card reveal" style="max-width: 480px; margin: 0 auto;">
-      <div class="testimonial-header">
-        <img class="testimonial-avatar-img" src="../../images/ashton-campbell.jpg" alt="Ashton Campbell">
-        <div>
-          <div class="testimonial-name">Ashton Campbell</div>
-          <span class="testimonial-tag">#Wins</span>
+    <div class="video-placeholder reveal" style="background: #e8e8e8;">
+      <div id="ashton-thumb" style="position:absolute; inset:0; cursor:pointer; border-radius:20px; overflow:hidden; z-index:2;" onclick="var f=document.getElementById('ashton-iframe'); f.src='https://drive.google.com/file/d/1f4S76kfzJwkiq7QmMjO-1kPmJsOhYsSQ/preview?autoplay=1'; f.style.display='block'; this.style.display='none';">
+        <img src="../../images/ashton-campbell.jpg" alt="Ashton Campbell testimonial" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.35); border-radius:20px; display:flex; align-items:center; justify-content:center;">
+          <div class="video-play-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
         </div>
       </div>
-      <div class="testimonial-title">Solo Closer with AI Appointment Booking</div>
-      <div class="testimonial-body">Running a solo closer operation with AI handling appointment booking. No team overhead, no massive ad budget &mdash; just data, outbound, and systems that work on autopilot.</div>
+      <iframe id="ashton-iframe" src="" style="position:absolute; inset:0; width:100%; height:100%; border:none; border-radius:20px; display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
+    <p class="booked-caption reveal">Ashton is in the Florida market. Him and his partner spent $50K in masterminds that taught running inbound &mdash; spending up to $8K/mo on PPL with little results. Over the last 30 days, he started texting foreclosures and collected $20K in assignments.</p>
   </div>
 </section>
 
