@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Scaling Session | New Breed Investors</title>
+<meta name="description" content="45–60 minutes to map a Niche Data + Outbound + AI plan for your market. Book your free Scaling Session with New Breed Investors.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '734895069233033');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+/* ============================================
+   BASE — NBI Brand Tokens
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --orange: #f46530;
+  --red: #e93d3d;
+  --purple: #6b21a8;
+  --purple-deep: #4c1d95;
+  --dark: #0f0f1a;
+  --dark-card: #1a1a2e;
+  --dark-lighter: #252540;
+  --text-white: #f5f5f5;
+  --text-muted: rgba(255,255,255,0.6);
+  --text-dark: #1a1a1a;
+  --text-dark-muted: #666;
+  --gradient-main: linear-gradient(135deg, #f46530, #e93d3d, #6b21a8);
+  --gradient-subtle: linear-gradient(135deg, rgba(244,101,48,0.15), rgba(107,33,168,0.15));
+  --gradient-border: linear-gradient(135deg, #f46530, #e93d3d, #6b21a8);
+  --glow-orange: rgba(244,101,48,0.4);
+  --glow-purple: rgba(107,33,168,0.3);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--text-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+
+/* ---- Keyframes ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+@keyframes meshMove {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ---- Scroll Reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ---- Utilities ---- */
+.gradient-text {
+  background: var(--gradient-main);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+.section-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--orange);
+}
+
+/* ---- Mesh Orbs ---- */
+.mesh-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+.orb-1 { width: 400px; height: 400px; background: var(--orange); opacity: 0.2; top: 10%; right: 5%; animation: meshMove 10s ease-in-out infinite; }
+.orb-2 { width: 350px; height: 350px; background: var(--purple); opacity: 0.15; bottom: 5%; left: 10%; animation: meshMove 14s ease-in-out infinite reverse; }
+.orb-3 { width: 200px; height: 200px; background: var(--red); opacity: 0.12; top: 50%; left: 40%; animation: meshMove 8s ease-in-out infinite; }
+
+/* ---- Hero Badge ---- */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: var(--gradient-subtle);
+  border: 1px solid rgba(244,101,48,0.3);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--orange);
+  margin-bottom: 28px;
+  backdrop-filter: blur(10px);
+}
+.live-dot {
+  width: 8px; height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  animation: glow 2s ease infinite;
+  box-shadow: 0 0 12px var(--glow-orange);
+}
+
+/* ---- Buttons ---- */
+.btn-gradient {
+  display: inline-block;
+  padding: 16px 40px;
+  background: var(--gradient-main);
+  background-size: 200% auto;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s, background-position 0.5s;
+}
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--glow-orange), 0 4px 15px var(--glow-purple);
+  background-position: right center;
+}
+.btn-white {
+  display: inline-block;
+  padding: 20px 56px;
+  background: #fff;
+  color: var(--dark);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-decoration: none;
+}
+.btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+/* ---- Sticky CTA Bar ---- */
+.cta-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 24px;
+  background: rgba(15,15,26,0.92);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cta-bar.visible { transform: translateY(0); }
+.cta-bar a {
+  padding: 12px 40px;
+  background: var(--gradient-main);
+  background-size: 200% auto;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-position 0.5s;
+  text-decoration: none;
+}
+.cta-bar a:hover { background-position: right center; }
+
+/* ---- Final CTA ---- */
+.final-cta {
+  padding: 120px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-main);
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.2) 100%);
+}
+.final-cta-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+.final-cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; color: #fff; }
+.final-cta p { color: rgba(255,255,255,0.85); margin-bottom: 36px; font-size: 1.1rem; }
+
+/* ---- Footer ---- */
+.footer {
+  background: var(--dark);
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   SCALE SESSION — PAGE STYLES
+   ============================================ */
+
+/* Hero */
+.ss-hero {
+  padding: 80px 24px 64px;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.ss-hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.7s ease both;
+}
+.ss-hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.ss-hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ss-bullet-list {
+  list-style: none;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+.ss-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.ss-bullet-list li strong { color: var(--text-white); }
+.ss-bullet-check {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--gradient-main);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #fff;
+  margin-top: 2px;
+}
+
+/* Calendar Section */
+.ss-calendar-section {
+  background: #fafafa;
+  color: var(--text-dark);
+  padding: 56px 24px 72px;
+}
+.ss-calendar-inner { max-width: 860px; margin: 0 auto; }
+.ss-calendar-anchor {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+.ss-calendar-wrapper {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 40px rgba(0,0,0,0.07);
+  position: relative;
+}
+.ss-calendar-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--gradient-main);
+  z-index: 1;
+}
+
+/* Who This Is For */
+.ss-qualify {
+  background: var(--dark);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.ss-qualify-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.ss-qualify h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 36px;
+  letter-spacing: -0.02em;
+}
+.ss-for-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.ss-for-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: 18px 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+}
+.ss-for-list li strong { color: var(--text-white); }
+.ss-for-icon {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  border-radius: 8px;
+  background: var(--gradient-main);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.ss-not-for {
+  padding: 18px 24px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-left: 3px solid rgba(255,255,255,0.2);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+.ss-not-for strong { color: rgba(255,255,255,0.5); }
+
+/* What Happens */
+.ss-what-happens {
+  background: #fafafa;
+  color: var(--text-dark);
+  padding: 80px 24px;
+}
+.ss-what-happens-inner { max-width: 700px; margin: 0 auto; }
+.ss-what-happens h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 36px;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+.ss-steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.ss-steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  font-size: 1rem;
+  color: var(--text-dark-muted);
+  line-height: 1.65;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
+}
+.ss-steps-list li:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.08); }
+.ss-step-num {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--gradient-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 1px;
+}
+.ss-steps-list li strong { color: var(--text-dark); }
+.ss-call-note {
+  font-size: 0.88rem;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.65;
+  padding: 0 12px;
+}
+
+/* Micro-Proof Strip */
+.ss-proof {
+  background: var(--dark);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.ss-proof-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.ss-proof h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 36px;
+  letter-spacing: -0.02em;
+}
+.ss-proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.ss-proof-card {
+  padding: 28px 24px;
+  border-radius: 18px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s;
+}
+.ss-proof-card:hover { transform: translateY(-5px); border-color: rgba(244,101,48,0.25); }
+.ss-proof-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gradient-main);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.ss-proof-card:hover::after { opacity: 1; }
+.ss-proof-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-white);
+  margin-bottom: 4px;
+}
+.ss-proof-market {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--orange);
+  background: rgba(244,101,48,0.1);
+  border: 1px solid rgba(244,101,48,0.2);
+  padding: 2px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.ss-proof-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+.ss-proof-card p strong { color: var(--orange); }
+
+/* Homework */
+.ss-homework {
+  background: #fafafa;
+  color: var(--text-dark);
+  padding: 80px 24px;
+}
+.ss-homework-inner { max-width: 660px; margin: 0 auto; }
+.ss-homework h2 {
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+.ss-homework-sub {
+  font-size: 0.95rem;
+  color: var(--text-dark-muted);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.ss-homework-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ss-homework-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 22px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  font-size: 0.95rem;
+  color: var(--text-dark-muted);
+  line-height: 1.6;
+}
+.ss-homework-list li strong { color: var(--text-dark); }
+.ss-hw-icon { flex-shrink: 0; font-size: 1.1rem; margin-top: 1px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ss-proof-grid { grid-template-columns: 1fr; }
+  .ss-hero { padding: 56px 20px 48px; }
+  .ss-bullet-list { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. HERO ============ -->
+<section class="ss-hero" id="hero">
+  <div class="mesh-orb orb-1"></div>
+  <div class="mesh-orb orb-2"></div>
+  <div class="mesh-orb orb-3"></div>
+  <div class="ss-hero-inner">
+    <div class="hero-badge"><span class="live-dot"></span> Free &bull; Limited Spots</div>
+    <h1>Book Your <span class="gradient-text">[3&ndash;5 Deals/Month]</span> Scaling Session</h1>
+    <p class="ss-hero-sub">45&ndash;60 minutes to map a Niche Data + Outbound + AI plan for your market.</p>
+    <ul class="ss-bullet-list">
+      <li>
+        <span class="ss-bullet-check">&#10003;</span>
+        <span>Review your current deal flow and numbers.</span>
+      </li>
+      <li>
+        <span class="ss-bullet-check">&#10003;</span>
+        <span>Identify where <strong>Niche Data, Outbound, and AI</strong> can add the fastest deals.</span>
+      </li>
+      <li>
+        <span class="ss-bullet-check">&#10003;</span>
+        <span>Decide together if working with us makes sense right now.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 2. CALENDAR EMBED ============ -->
+<section class="ss-calendar-section">
+  <div class="ss-calendar-inner">
+    <p class="ss-calendar-anchor">Choose a time below that you can be focused and distraction&#8209;free.</p>
+    <div class="ss-calendar-wrapper reveal">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=f46530" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+    <p style="text-align:center;font-size:0.82rem;color:#999;margin-top:18px;">
+      Spots are limited. If you don&rsquo;t see a time that works, check back &mdash; we release new availability weekly.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 3. WHO THIS IS FOR ============ -->
+<section class="ss-qualify">
+  <div class="mesh-orb" style="width:320px;height:320px;background:var(--purple);opacity:0.12;top:5%;right:-8%;animation:meshMove 14s ease-in-out infinite;"></div>
+  <div class="ss-qualify-inner">
+    <p class="section-eyebrow reveal">Qualify Yourself</p>
+    <h2 class="reveal">Who this call is for</h2>
+    <ul class="ss-for-list">
+      <li class="reveal">
+        <span class="ss-for-icon">&#10003;</span>
+        <span><strong>Wholesalers, flippers, and creative investors</strong> who want 2&ndash;5 consistent deals per month.</span>
+      </li>
+      <li class="reveal reveal-delay-1">
+        <span class="ss-for-icon">&#10003;</span>
+        <span>You&rsquo;re <strong>tired of gambling on PPC/PPL</strong> or generic inbound leads.</span>
+      </li>
+      <li class="reveal reveal-delay-2">
+        <span class="ss-for-icon">&#10003;</span>
+        <span>You&rsquo;re willing to <strong>follow a system</strong> and put in a few focused hours per week.</span>
+      </li>
+    </ul>
+    <div class="ss-not-for reveal">
+      <strong>Not for:</strong> People looking for a magic button, or who aren&rsquo;t prepared to act on a clear plan.
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. WHAT HAPPENS ON THE CALL ============ -->
+<section class="ss-what-happens">
+  <div class="ss-what-happens-inner">
+    <p class="section-eyebrow reveal">No Surprises</p>
+    <h2 class="reveal">What will happen on your Scaling Session</h2>
+    <ol class="ss-steps-list">
+      <li class="reveal">
+        <span class="ss-step-num">1</span>
+        <span>We&rsquo;ll quickly get context on your <strong>market, current deals, and marketing</strong>.</span>
+      </li>
+      <li class="reveal reveal-delay-1">
+        <span class="ss-step-num">2</span>
+        <span>We&rsquo;ll map out how a <strong>Niche Data + Outbound + AI system</strong> would look for <em>your</em> situation.</span>
+      </li>
+      <li class="reveal reveal-delay-2">
+        <span class="ss-step-num">3</span>
+        <span>If it&rsquo;s a fit, we&rsquo;ll walk through how our program works, answer questions, and talk numbers. <strong>If it&rsquo;s not, we&rsquo;ll tell you straight</strong> and point you in the right direction.</span>
+      </li>
+    </ol>
+    <p class="ss-call-note reveal">
+      <em>This is not a free coaching call; it&rsquo;s a working session to see if we should build this system with you now or not.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 5. MICRO-PROOF STRIP ============ -->
+<section class="ss-proof">
+  <div class="mesh-orb" style="width:340px;height:340px;background:var(--orange);opacity:0.09;bottom:5%;left:-8%;animation:meshMove 12s ease-in-out infinite reverse;"></div>
+  <div class="ss-proof-inner">
+    <p class="section-eyebrow reveal">Real Results</p>
+    <h2 class="reveal">A few quick wins from this system</h2>
+    <div class="ss-proof-grid">
+      <div class="ss-proof-card reveal">
+        <div class="ss-proof-name">Teagan Trapp</div>
+        <span class="ss-proof-market">Canada &mdash; Virtual Wholesaling</span>
+        <p>6 months cold&#8209;calling generic data, <strong>0 deals</strong>. Switched to niche probate + AI follow&#8209;up. Stacked <strong>~$100K in assignments</strong> and quit his factory job in 2025.</p>
+      </div>
+      <div class="ss-proof-card reveal reveal-delay-1">
+        <div class="ss-proof-name">Carrie Tyler</div>
+        <span class="ss-proof-market">Wholesaling / Flipping</span>
+        <p>Texted foreclosure leads, let AI book the appointment. Closed a <strong>$60K profit flip</strong> &mdash; on Cinco de Mayo, which also turned out to be closing day.</p>
+      </div>
+      <div class="ss-proof-card reveal reveal-delay-2">
+        <div class="ss-proof-name">Manny Madrid</div>
+        <span class="ss-proof-market">Wholesaling &mdash; W2 + Part&#8209;Time</span>
+        <p>60 days in, AI texting after his 9&#8209;5, he called the appointments. <strong>Locked and assigned a $30K deal</strong> before he even started the email campaigns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. BEFORE THE CALL ============ -->
+<section class="ss-homework">
+  <div class="ss-homework-inner">
+    <p class="section-eyebrow reveal">Show Up Ready</p>
+    <h2 class="reveal">Before our call</h2>
+    <p class="ss-homework-sub reveal">The more prepared you are, the more useful the session. Takes 5 minutes to think through:</p>
+    <ul class="ss-homework-list">
+      <li class="reveal">
+        <span class="ss-hw-icon">&#128202;</span>
+        <span>Know your basic numbers: <strong>deals in the last 12 months, average profit, rough marketing spend</strong>.</span>
+      </li>
+      <li class="reveal reveal-delay-1">
+        <span class="ss-hw-icon">&#127981;</span>
+        <span>Have <strong>1&ndash;3 recent or potential deals in mind</strong> so we can use real examples, not hypotheticals.</span>
+      </li>
+      <li class="reveal reveal-delay-2">
+        <span class="ss-hw-icon">&#128274;</span>
+        <span>Make sure you can be in a <strong>quiet place</strong>, not driving or distracted.</span>
+      </li>
+      <li class="reveal reveal-delay-3">
+        <span class="ss-hw-icon">&#128106;</span>
+        <span>If you make decisions with a <strong>spouse or business partner</strong>, try to book a time they can join.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner reveal">
+    <h2>Ready to Map Your Deal&#8209;Flow System?</h2>
+    <p>Spots go fast. Pick a time above while it&rsquo;s still open.</p>
+    <a href="#" onclick="document.querySelector('.ss-calendar-wrapper').scrollIntoView({behavior:'smooth',block:'start'});return false;" class="btn-white">Book My Scaling Session</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 New Breed Investors, Inc. All rights reserved.</p>
+</footer>
+
+<!-- Sticky CTA Bar -->
+<div class="cta-bar" id="ctaBar">
+  <a href="#" onclick="document.querySelector('.ss-calendar-wrapper').scrollIntoView({behavior:'smooth',block:'start'});return false;">Book My Scaling Session</a>
+</div>
+
+<script>
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Sticky CTA bar after hero scrolls out
+  const heroEl = document.getElementById('hero');
+  const ctaBarEl = document.getElementById('ctaBar');
+  if (heroEl && ctaBarEl) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => ctaBarEl.classList.toggle('visible', !e.isIntersecting));
+    }, { threshold: 0 });
+    obs.observe(heroEl);
+  }
+</script>
+</body>
+</html>
