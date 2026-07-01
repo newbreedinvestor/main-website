@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KGTLBKV6');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x556suj2xr");
+    </script>
+    <!-- End Microsoft Clarity -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Training Replay: Stop Burning $10K on Leads | New Breed Investors</title>
+<meta name="description" content="Missed the live training? Watch the full replay: how investors replace overpriced PPC/PPL leads with 3-5 off-market deals per month using courthouse data and simple outbound.">
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '734895069233033');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+/* ============================================
+   BASE — NBI Brand Tokens
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --orange: #f46530;
+  --red: #e93d3d;
+  --purple: #6b21a8;
+  --purple-deep: #4c1d95;
+  --dark: #0f0f1a;
+  --dark-card: #1a1a2e;
+  --dark-lighter: #252540;
+  --text-white: #f5f5f5;
+  --text-muted: rgba(255,255,255,0.6);
+  --text-dark: #1a1a1a;
+  --text-dark-muted: #666;
+  --gradient-main: linear-gradient(135deg, #f46530, #e93d3d, #6b21a8);
+  --gradient-subtle: linear-gradient(135deg, rgba(244,101,48,0.15), rgba(107,33,168,0.15));
+  --glow-orange: rgba(244,101,48,0.4);
+  --glow-purple: rgba(107,33,168,0.3);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--dark);
+  color: var(--text-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+
+/* ---- Keyframes ---- */
+@keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes glow { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+@keyframes meshMove { 0% { transform: translate(0,0) scale(1); } 33% { transform: translate(30px,-30px) scale(1.1); } 66% { transform: translate(-20px,20px) scale(0.95); } 100% { transform: translate(0,0) scale(1); } }
+@keyframes pulseRing { 0% { transform: scale(0.9); opacity: 0.7; } 70% { transform: scale(1.5); opacity: 0; } 100% { opacity: 0; } }
+
+/* ---- Scroll Reveal ---- */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ---- Utilities ---- */
+.gradient-text {
+  background: var(--gradient-main);
+  background-size: 200% auto;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+.section-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; color: var(--orange); }
+
+/* ---- Mesh Orbs ---- */
+.mesh-orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+.orb-1 { width: 400px; height: 400px; background: var(--orange); opacity: 0.2; top: 8%; right: 5%; animation: meshMove 10s ease-in-out infinite; }
+.orb-2 { width: 350px; height: 350px; background: var(--purple); opacity: 0.15; bottom: 5%; left: 10%; animation: meshMove 14s ease-in-out infinite reverse; }
+.orb-3 { width: 200px; height: 200px; background: var(--red); opacity: 0.12; top: 50%; left: 40%; animation: meshMove 8s ease-in-out infinite; }
+
+/* ---- Brand Wordmark (no nav) ---- */
+.brandbar { text-align: center; padding: 26px 24px 4px; position: relative; z-index: 2; }
+.brandbar a { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; text-decoration: none; color: var(--text-white); }
+
+/* ---- Hero Badge ---- */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px;
+  background: var(--gradient-subtle); border: 1px solid rgba(244,101,48,0.3);
+  border-radius: 100px; font-size: 0.78rem; font-weight: 600; color: var(--orange);
+  margin-bottom: 24px; backdrop-filter: blur(10px);
+}
+.live-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; animation: glow 2s ease infinite; box-shadow: 0 0 12px var(--glow-orange); }
+
+/* ---- Buttons ---- */
+.btn-gradient {
+  display: inline-block; padding: 16px 40px; background: var(--gradient-main); background-size: 200% auto;
+  color: #fff; font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; border: none;
+  border-radius: 12px; cursor: pointer; text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s, background-position 0.5s;
+}
+.btn-gradient:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--glow-orange), 0 4px 15px var(--glow-purple); background-position: right center; }
+.btn-white {
+  display: inline-block; padding: 20px 56px; background: #fff; color: var(--dark);
+  font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; border: none;
+  border-radius: 14px; cursor: pointer; transition: transform 0.2s, box-shadow 0.3s; text-decoration: none;
+}
+.btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero { padding: 24px 24px 40px; position: relative; overflow: hidden; text-align: center; }
+.hero-inner { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(2.1rem, 4.6vw, 3.3rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 18px; }
+.hero-sub { font-size: 1.12rem; color: var(--text-muted); line-height: 1.7; max-width: 600px; margin: 0 auto 14px; }
+.hero-note { font-size: 0.9rem; color: var(--orange); font-weight: 600; }
+
+/* ============================================
+   VIDEO REPLAY (click-to-play)
+   ============================================ */
+.replay-section { padding: 20px 24px 8px; position: relative; }
+.replay-video {
+  position: relative; width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16 / 9;
+  border-radius: 20px; overflow: hidden; box-shadow: 0 24px 70px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.09); background: #000;
+}
+.replay-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.replay-poster {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+  padding: 24px; text-align: center; overflow: hidden;
+}
+.replay-poster-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 55%, #4c1d95 120%); }
+.replay-poster-bg::after { content: ''; position: absolute; width: 420px; height: 420px; border-radius: 50%; background: var(--orange); opacity: 0.18; filter: blur(90px); top: -80px; right: -60px; }
+.replay-poster > * { position: relative; z-index: 1; }
+.replay-tag {
+  display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--orange); background: rgba(244,101,48,0.12); border: 1px solid rgba(244,101,48,0.28);
+  padding: 5px 14px; border-radius: 8px;
+}
+.replay-poster-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(1.3rem, 3vw, 2rem); color: #fff; line-height: 1.15; max-width: 620px; letter-spacing: -0.02em; }
+.replay-play-wrap { position: relative; width: 82px; height: 82px; margin: 4px 0; }
+.replay-play-ring { position: absolute; inset: 0; border-radius: 50%; background: var(--gradient-main); animation: pulseRing 2.4s cubic-bezier(0.16,1,0.3,1) infinite; }
+.replay-play {
+  position: absolute; inset: 0; width: 82px; height: 82px; border-radius: 50%; background: var(--gradient-main);
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 34px var(--glow-orange);
+  transition: transform 0.25s;
+}
+.replay-poster:hover .replay-play { transform: scale(1.06); }
+.replay-play svg { width: 30px; height: 30px; margin-left: 5px; fill: #fff; }
+.replay-poster-cta { font-size: 0.92rem; color: rgba(255,255,255,0.75); font-weight: 500; }
+.replay-caption { max-width: 760px; margin: 22px auto 0; text-align: center; font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; }
+.replay-caption .hl { color: var(--orange); font-weight: 600; }
+
+/* Inline CTA under video */
+.after-video-cta { text-align: center; padding: 30px 24px 56px; }
+
+/* ============================================
+   DISCOVER (dark + mesh)
+   ============================================ */
+.discover { padding: 72px 24px; position: relative; overflow: hidden; background: var(--dark); }
+.discover-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; text-align: center; }
+.discover h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; margin-bottom: 40px; letter-spacing: -0.02em; }
+.discover-item { display: flex; align-items: flex-start; gap: 16px; text-align: left; padding: 18px 22px; margin-bottom: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; }
+.discover-item p { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
+.discover-item strong { color: var(--text-white); }
+.discover-check { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; background: var(--gradient-main); display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #fff; font-weight: 700; margin-top: 1px; }
+.discover-closing { margin-top: 26px; font-size: 1.05rem; color: var(--text-white); font-weight: 500; }
+
+/* ============================================
+   BOOKING (light + calendar)
+   ============================================ */
+.booking { background: #fafafa; color: var(--text-dark); padding: 66px 24px; }
+.booking-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+.booking h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; margin-bottom: 12px; }
+.booking-sub { font-size: 1.08rem; color: var(--text-dark-muted); line-height: 1.7; max-width: 600px; margin: 0 auto 30px; }
+.calendar-wrapper { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 6px 40px rgba(0,0,0,0.07); position: relative; }
+.calendar-wrapper::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-main); z-index: 1; }
+.booking-fineprint { font-size: 0.82rem; color: #999; margin-top: 18px; }
+
+/* ============================================
+   SOCIAL PROOF / VSL (light)
+   ============================================ */
+.social-proof { background: #fff; color: var(--text-dark); padding: 66px 24px; }
+.social-proof-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+.social-proof h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; margin-bottom: 32px; }
+.vsl-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; box-shadow: 0 16px 50px rgba(0,0,0,0.14); background: #000; }
+.vsl-wrapper video { width: 100%; height: 100%; object-fit: cover; }
+.vsl-caption { text-align: center; margin-top: 22px; font-size: 1rem; color: var(--text-dark-muted); line-height: 1.7; }
+.vsl-caption .highlight { color: var(--orange); font-weight: 700; }
+
+/* ============================================
+   TESTIMONIALS (light)
+   ============================================ */
+.testimonials { background: #fafafa; color: var(--text-dark); padding: 66px 24px; }
+.testimonials-inner { max-width: 1040px; margin: 0 auto; }
+.testimonials-header { text-align: center; margin-bottom: 40px; }
+.testimonials-header h3 { font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testimonial-card { background: #fff; border-radius: 18px; padding: 24px; box-shadow: 0 2px 14px rgba(0,0,0,0.05); text-align: left; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s; }
+.testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(0,0,0,0.09); }
+.testimonial-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.testimonial-avatar-img { width: 44px; height: 44px; border-radius: 12px; object-fit: cover; flex-shrink: 0; }
+.testimonial-name { font-weight: 700; font-size: 0.95rem; color: var(--text-dark); }
+.testimonial-tag { font-size: 0.7rem; font-weight: 600; color: var(--orange); background: rgba(244,101,48,0.1); border: 1px solid rgba(244,101,48,0.2); padding: 2px 10px; border-radius: 6px; display: inline-block; margin-top: 3px; }
+.testimonial-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.98rem; color: var(--text-dark); margin-bottom: 8px; }
+.testimonial-body { font-size: 0.9rem; color: var(--text-dark-muted); line-height: 1.65; }
+
+/* ============================================
+   INSTRUCTOR (dark)
+   ============================================ */
+.instructor { background: var(--dark); padding: 80px 24px; position: relative; overflow: hidden; }
+.instructor-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
+.instructor-photo img { width: 100%; border-radius: 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.4); }
+.instructor-content h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 800; margin-bottom: 16px; }
+.instructor-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 22px; }
+.instructor-stat { font-size: 0.8rem; font-weight: 600; color: var(--text-white); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 7px 14px; border-radius: 8px; }
+.instructor-content blockquote { border-left: 3px solid var(--orange); padding-left: 20px; margin-bottom: 20px; }
+.instructor-content blockquote p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 10px; }
+.instructor-content blockquote strong { color: var(--text-white); }
+.instructor-bottom { font-size: 1.05rem; font-weight: 500; }
+
+/* ============================================
+   FINAL CTA (gradient)
+   ============================================ */
+.final-cta { padding: 110px 24px; text-align: center; position: relative; overflow: hidden; background: var(--gradient-main); background-size: 200% 200%; animation: gradientShift 6s ease infinite; }
+.final-cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.2) 100%); }
+.final-cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+.final-cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; color: #fff; }
+.final-cta p { color: rgba(255,255,255,0.88); margin-bottom: 34px; font-size: 1.1rem; }
+
+/* ---- Footer ---- */
+.footer { background: var(--dark); text-align: center; padding: 40px 24px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.8rem; color: var(--text-muted); }
+
+/* ---- Sticky CTA Bar ---- */
+.cta-bar { position: fixed; bottom: 0; left: 0; right: 0; padding: 14px 24px; background: rgba(15,15,26,0.92); backdrop-filter: blur(20px); border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: center; z-index: 100; transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+.cta-bar.visible { transform: translateY(0); }
+.cta-bar a { padding: 12px 40px; background: var(--gradient-main); background-size: 200% auto; color: #fff; font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; transition: background-position 0.5s; text-decoration: none; }
+.cta-bar a:hover { background-position: right center; }
+
+/* ---- Mobile ---- */
+@media (max-width: 860px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .instructor-inner { grid-template-columns: 1fr; gap: 28px; }
+  .instructor-photo { max-width: 340px; margin: 0 auto; }
+}
+</style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGTLBKV6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+<!-- Brand wordmark (no navigation) -->
+<div class="brandbar"><a href="https://newbreedinvestor.io/">New Breed Investors</a></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="mesh-orb orb-1"></div>
+  <div class="mesh-orb orb-2"></div>
+  <div class="mesh-orb orb-3"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="live-dot"></span> Training Replay</div>
+    <h1>You Registered &mdash; But Couldn&rsquo;t Make It Live.<br><span class="gradient-text">Here&rsquo;s the Full Replay.</span></h1>
+    <p class="hero-sub">Watch the complete training below: how active investors are replacing overpriced PPC/PPL leads with <strong>3&ndash;5 off-market deals a month</strong> using courthouse data and simple outbound.</p>
+    <p class="hero-note">Only up for a limited time &mdash; watch it before it comes down.</p>
+  </div>
+</section>
+
+<!-- ============ VIDEO REPLAY ============ -->
+<section class="replay-section">
+  <div class="replay-video" id="replayVideo">
+    <button class="replay-poster" id="replayPoster" type="button" aria-label="Play the training replay">
+      <span class="replay-poster-bg"></span>
+      <span class="replay-tag">60-Minute Training</span>
+      <span class="replay-poster-title">Stop Burning $10K on Leads</span>
+      <span class="replay-play-wrap">
+        <span class="replay-play-ring"></span>
+        <span class="replay-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+      </span>
+      <span class="replay-poster-cta">Click to play the full replay</span>
+    </button>
+  </div>
+  <p class="replay-caption">Grab a notepad. By the end you&rsquo;ll have a <span class="hl">practical roadmap</span> you can start applying the same day &mdash; then book a free Scaling Session to map it to your market.</p>
+</section>
+
+<!-- Inline CTA under the video -->
+<div class="after-video-cta">
+  <a href="#book" class="btn-gradient" data-cta="after-video">Book My Free Scaling Session</a>
+</div>
+
+<!-- ============ WHAT YOU'LL DISCOVER ============ -->
+<section class="discover">
+  <div class="mesh-orb" style="width:320px;height:320px;background:var(--purple);opacity:0.12;top:5%;right:-8%;animation:meshMove 14s ease-in-out infinite;"></div>
+  <div class="discover-inner">
+    <p class="section-eyebrow gradient-text reveal">What&rsquo;s Inside</p>
+    <h2 class="reveal">What You&rsquo;ll Get From the Replay</h2>
+    <div class="discover-item reveal">
+      <div class="discover-check">&#10003;</div>
+      <p>How to get <strong>high-distress courthouse lists</strong> in your market (and which ones actually produce deals)</p>
+    </div>
+    <div class="discover-item reveal reveal-delay-1">
+      <div class="discover-check">&#10003;</div>
+      <p>The <strong>3 outbound campaigns</strong> our community uses to turn cold records into warm seller conversations</p>
+    </div>
+    <div class="discover-item reveal reveal-delay-2">
+      <div class="discover-check">&#10003;</div>
+      <p>How to plug those campaigns into a <strong>prebuilt CRM pipeline</strong> so nothing slips through the cracks</p>
+    </div>
+    <div class="discover-item reveal reveal-delay-3">
+      <div class="discover-check">&#10003;</div>
+      <p>Why most investors will <strong>stay slaves to lead vendors</strong> in 2026&hellip; and how to be the one who owns the data</p>
+    </div>
+    <p class="discover-closing reveal">Watched it and want help applying it to your market? Book your free Scaling Session below.</p>
+  </div>
+</section>
+
+<!-- ============ BOOKING (Calendly) ============ -->
+<section class="booking" id="book">
+  <div class="booking-inner">
+    <p class="section-eyebrow reveal">Your Next Step</p>
+    <h2 class="reveal">Book Your Free Scaling Session</h2>
+    <p class="booking-sub reveal">30&ndash;45 minutes to map a Niche Data + Outbound + AI plan for <em>your</em> market. Pick a time below while it&rsquo;s open.</p>
+    <div class="calendar-wrapper reveal">
+      <!-- Calendly inline embed — scaling session, tagged for the webinar-replay funnel -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=f46530&utm_source=newbreed-site&utm_medium=calendly-embed&utm_campaign=webinar-replay&utm_content=webinar-replay" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+    <p class="booking-fineprint">Spots are limited. If you don&rsquo;t see a time that works, check back &mdash; we release new availability weekly.</p>
+  </div>
+</section>
+
+<!-- ============ SOCIAL PROOF / VSL ============ -->
+<section class="social-proof">
+  <div class="social-proof-inner">
+    <h2 class="reveal">Real People. <span class="gradient-text">Real Deals.</span> Real Results.</h2>
+    <div class="vsl-wrapper reveal">
+      <video controls playsinline preload="metadata" poster="../images/hayes-tim-vsl-thumbnail.png">
+        <source src="https://assets.cdn.filesafe.space/DtZlCxzIoAvbNURI3XeL/media/6956bc39b831c483da881132.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="vsl-caption reveal">Hayes in Florida cut his marketing from <span class="highlight">$12K to under $2K/month</span> &mdash; and still closes <span class="highlight">$10K&ndash;$20K</span> every month using nothing but courthouse data + texting. <span class="highlight">All while working 20 hours a week.</span></p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <div class="testimonials-header"><h3 class="reveal">From the Community</h3></div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="../images/jin-ho.jpg" alt="Jin Ho">
+          <div><div class="testimonial-name">Jin Ho</div><span class="testimonial-tag">#Wins</span></div>
+        </div>
+        <div class="testimonial-title">Win 1/1000000000000</div>
+        <div class="testimonial-body">First signed PSA, which hopefully will turn into a closed deal. Shoutout to my mentors @Tim Yu and @Phillip Thai. They not only provided me the resources, but also took time out of his day to coach me, listen to my recordings, and even close my first deal.</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="../images/tristan-beavers.jpg" alt="Tristan Beavers">
+          <div><div class="testimonial-name">Tristan Beavers</div><span class="testimonial-tag">General</span></div>
+        </div>
+        <div class="testimonial-title">S/o Tim the Man</div>
+        <div class="testimonial-body">Just wanted to make a quick appreciation post. Been hitting the phones hard the past couple weeks. Had a look at my KPIs with Tim and he helped me identify a couple short comings. If you track your KPIs properly, they really tell a story about your business.</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="../images/jayme-fernandes.jpg" alt="Jayme Fernandes">
+          <div><div class="testimonial-name">Jayme Fernandes</div><span class="testimonial-tag">#Wins</span></div>
+        </div>
+        <div class="testimonial-title">Live Call Success! Feeling Unstoppable!</div>
+        <div class="testimonial-body">I&rsquo;ve only been in the program for about a month, and I started working the leads around two and a half weeks ago. In my first week, the AI bot already qualified a lead and booked an appointment for us. @Phillip Thai and @Tim Yu asked if he could call one of my leads and help me close the deal.</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="../images/tim-yee.jpg" alt="Tim Yee">
+          <div><div class="testimonial-name">Tim Yee</div><span class="testimonial-tag">#Wins</span></div>
+        </div>
+        <div class="testimonial-title">Huge Shoutout to Tim and Phil</div>
+        <div class="testimonial-body">First deal EMD submitted locked up! $15k cheque! Keep on pushing and join New Breed Investors Pro!</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="../images/edwin-jimenez.jpg" alt="Edwin Jimenez">
+          <div><div class="testimonial-name">Edwin Jimenez</div><span class="testimonial-tag">#Wins</span></div>
+        </div>
+        <div class="testimonial-title">Tim Yu helped me close 2 deals I thought were dead</div>
+        <div class="testimonial-body">What&rsquo;s up guys! Just wanted to give @Tim Yu a shoutout for helping me close 2 deals I thought were a lost cause. For the past year, I&rsquo;ve been following up with 2 guys out in Louisville that told me &ldquo;I&rsquo;m not ready to sell but maybe in the future.&rdquo; One guy wanted to wait until his tenants were out and the other had a sticky situation with a probate.</div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="../images/david-cohen.jpg" alt="David Cohen">
+          <div><div class="testimonial-name">David Cohen</div><span class="testimonial-tag">#Wins</span></div>
+        </div>
+        <div class="testimonial-title">Happy Holidays &amp; New Year!</div>
+        <div class="testimonial-body">Hope everyone&rsquo;s enjoying the holidays and getting energized for the year ahead. On my mini-vacation, I knocked out a few big wins: finished the website design and wrapped up the credibility packet. I also started an Indeed job post but paused it so I can launch it next week&mdash;planning to hire 2&ndash;3 sales reps and dive into learning how to hire, how to train and delegate, learn leadership which is a skill for any business! Looking forward to the new year and ready to push, build, and prosper.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTRUCTOR ============ -->
+<section class="instructor">
+  <div class="mesh-orb" style="width:340px;height:340px;background:var(--orange);opacity:0.09;bottom:5%;left:-8%;animation:meshMove 12s ease-in-out infinite reverse;"></div>
+  <div class="instructor-inner">
+    <div class="instructor-photo reveal">
+      <img src="../images/tim-speaking.jpg" alt="Tim Yu speaking on stage">
+    </div>
+    <div class="instructor-content reveal reveal-delay-1">
+      <h2>Tim Yu</h2>
+      <div class="instructor-stats">
+        <span class="instructor-stat">80+ Wholesale Deals</span>
+        <span class="instructor-stat">$100K+ on Marketing</span>
+        <span class="instructor-stat">AI + First to Market</span>
+      </div>
+      <blockquote>
+        <p>I hate <strong>renting leads</strong>.</p>
+        <p>Most investors spend <strong>$8K+ a month</strong> on ads just to make the phone ring. One slow month can <strong>crush</strong> your business.</p>
+        <p>I run a <strong>profit-first</strong> business. That means I keep costs low and margins high.</p>
+      </blockquote>
+      <p class="instructor-bottom"><span class="gradient-text">Niche data + simple outreach</span> lets you own your leads &mdash; not gamble on ads.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="final-cta-inner reveal">
+    <h2>Ready to Map Your Deal-Flow System?</h2>
+    <p>You&rsquo;ve seen how it works. Now let&rsquo;s build it for your market &mdash; book your free Scaling Session while spots are open.</p>
+    <a href="#book" class="btn-white" data-cta="final">Book My Free Scaling Session</a>
+  </div>
+</section>
+
+<!-- Footer (no navigation) -->
+<footer class="footer">
+  <p>&copy; 2026 New Breed Investors, Inc. All rights reserved.</p>
+</footer>
+
+<!-- Sticky CTA Bar -->
+<div class="cta-bar" id="ctaBar">
+  <a href="#book" data-cta="sticky">Book My Free Scaling Session</a>
+</div>
+
+<script>
+  /* ==== CONFIG: paste the Google Drive FILE ID of the webinar recording here ====
+     From a share link like https://drive.google.com/file/d/1AbC...XyZ/view?usp=sharing
+     copy ONLY the part between /d/ and /view  ->  1AbC...XyZ
+     Also set the file's sharing to "Anyone with the link – Viewer".
+  ============================================================================= */
+  var DRIVE_FILE_ID = "122DmAheLEaJtLjCTgGielqvze-RgiBtv";
+
+  // Click-to-play: swap the poster for the Drive player on click
+  (function () {
+    var poster = document.getElementById('replayPoster');
+    var wrap = document.getElementById('replayVideo');
+    if (!poster || !wrap) return;
+    poster.addEventListener('click', function () {
+      var iframe = document.createElement('iframe');
+      iframe.className = 'replay-iframe';
+      iframe.src = 'https://drive.google.com/file/d/' + DRIVE_FILE_ID + '/preview';
+      iframe.allow = 'autoplay; fullscreen';
+      iframe.setAttribute('allowfullscreen', '');
+      wrap.innerHTML = '';
+      wrap.appendChild(iframe);
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'replay_play', video: 'stop-burning-10k' });
+      if (typeof fbq === 'function') { fbq('trackCustom', 'ReplayPlay'); }
+    });
+  })();
+
+  // Scroll reveal
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+
+  // Sticky CTA bar after hero scrolls out
+  var heroEl = document.getElementById('hero');
+  var ctaBarEl = document.getElementById('ctaBar');
+  if (heroEl && ctaBarEl) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { ctaBarEl.classList.toggle('visible', !e.isIntersecting); });
+    }, { threshold: 0 });
+    obs.observe(heroEl);
+  }
+
+  // Calendly booking confirmed -> dataLayer (GA4 via GTM) + Meta conversion
+  (function () {
+    function isCalendlyEvent(e) {
+      return e.data && typeof e.data.event === 'string' && e.data.event.indexOf('calendly') === 0;
+    }
+    window.addEventListener('message', function (e) {
+      if (!isCalendlyEvent(e)) return;
+      if (e.data.event === 'calendly.event_scheduled') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'book_call_completed', booking_source: 'webinar-replay' });
+        if (typeof fbq === 'function') { fbq('track', 'Schedule'); }
+      }
+    });
+  })();
+</script>
+</body>
+</html>
