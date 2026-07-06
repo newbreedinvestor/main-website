@@ -259,7 +259,7 @@
     <p class="sub reveal">Pick a time below. A member of our team will confirm your spot and send you a short prep form so we can make the most of your 30 minutes.</p>
     <div class="calendly-wrap reveal">
       <!-- Calendly inline widget begin -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/roadmap?hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a1a&primary_color=f46530" style="min-width:320px;height:600px;"></div>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a1a&primary_color=f46530&utm_source=newbreed-site&utm_medium=calendly-embed&utm_campaign=scale-session&utm_content=start-page" style="min-width:320px;height:600px;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       <!-- Calendly inline widget end -->
     </div>
@@ -291,5 +291,22 @@
 </div>
 
 <script src="animations.js"></script>
+
+<!-- Calendly booking confirmed -> dataLayer (GA4 via GTM) + Meta conversion -->
+<script>
+(function () {
+  function isCalendlyEvent(e) {
+    return e.data && typeof e.data.event === 'string' && e.data.event.indexOf('calendly') === 0;
+  }
+  window.addEventListener('message', function (e) {
+    if (!isCalendlyEvent(e)) return;
+    if (e.data.event === 'calendly.event_scheduled') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'book_call_completed', booking_source: 'start-page' });
+      if (typeof fbq === 'function') { fbq('track', 'Schedule'); }
+    }
+  });
+})();
+</script>
 </body>
 </html>

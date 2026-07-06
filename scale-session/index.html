@@ -637,7 +637,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   <div class="ss-calendar-inner">
     <p class="ss-calendar-anchor">Choose a time below that you can be focused and distraction&#8209;free.</p>
     <div class="ss-calendar-wrapper reveal">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=f46530" style="min-width:320px;height:700px;"></div>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=f46530&utm_source=newbreed-site&utm_medium=calendly-embed&utm_campaign=scale-session&utm_content=scale-session-page" style="min-width:320px;height:700px;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
     <p style="text-align:center;font-size:0.82rem;color:#999;margin-top:18px;">
@@ -803,6 +803,21 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
     }, { threshold: 0 });
     obs.observe(heroEl);
   }
+
+  // Calendly booking confirmed -> dataLayer (GA4 via GTM) + Meta conversion
+  (function () {
+    function isCalendlyEvent(e) {
+      return e.data && typeof e.data.event === 'string' && e.data.event.indexOf('calendly') === 0;
+    }
+    window.addEventListener('message', function (e) {
+      if (!isCalendlyEvent(e)) return;
+      if (e.data.event === 'calendly.event_scheduled') {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'book_call_completed', booking_source: 'scale-session-page' });
+        if (typeof fbq === 'function') { fbq('track', 'Schedule'); }
+      }
+    });
+  })();
 </script>
 </body>
 </html>
