@@ -169,10 +169,50 @@ src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"
   margin-top: 1px;
 }
 
+/* Testimonials */
+.booked-proof {
+  background: var(--dark);
+  padding: 56px 24px 72px;
+  position: relative;
+  overflow: hidden;
+}
+.booked-proof-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.booked-proof-heading {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.booked-proof-heading h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.booked-proof .vsl-wrapper { margin-top: 36px; }
+.booked-proof .vsl-caption { margin-top: 20px; text-align: center; }
+.booked-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 64px;
+}
+.booked-proof-grid .testimonial-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.booked-proof-grid .testimonial-name,
+.booked-proof-grid .testimonial-title { color: var(--text-white); }
+.booked-proof-grid .testimonial-body { color: var(--text-muted); }
+
 @media (max-width: 768px) {
   .booked-hero { padding: 40px 20px 28px; }
   .booked-hero h1 { letter-spacing: -0.02em; }
   .booked-video-section { padding: 0 16px 44px; }
+  .booked-proof { padding: 44px 16px 56px; }
 }
 </style>
 </head>
@@ -205,6 +245,179 @@ src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"
     </div>
     <div class="vsl-wrapper reveal">
       <iframe src="https://drive.google.com/file/d/1rGA-xUWn4EnRPqIPTwRB80v5hVDM7aEg/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="booked-proof">
+  <div class="mesh-orb" style="width: 350px; height: 350px; background: var(--orange); opacity: 0.1; bottom: 8%; left: -8%; animation: meshMove 12s ease-in-out infinite;"></div>
+  <div class="booked-proof-inner">
+    <div class="booked-proof-heading reveal">
+      <p class="section-eyebrow gradient">Success Stories</p>
+      <h2>Real People. <span class="gradient-text">Real Deals.</span> Real Results.</h2>
+    </div>
+
+    <!-- Hayes Video Testimonial -->
+    <div class="vsl-wrapper reveal">
+      <video controls playsinline preload="metadata" poster="/images/hayes-tim-vsl-thumbnail.png" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+        <source src="https://assets.cdn.filesafe.space/DtZlCxzIoAvbNURI3XeL/media/6956bc39b831c483da881132.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <p class="vsl-caption reveal">Hayes in Florida cut his marketing from <strong><span class="highlight">$12K to under $2K/month</span></strong> &mdash; and still closes <strong><span class="highlight">$10K&ndash;$20K</span></strong> every month using nothing but courthouse data + texting. <span class="highlight">All while working 20 hours a week.</span></p>
+
+    <!-- Carrie Video Testimonial -->
+    <div class="vsl-wrapper reveal" style="position: relative;">
+      <div id="carrie-thumbnail" style="position:absolute; inset:0; cursor:pointer; border-radius:20px; overflow:hidden; z-index:2;" onclick="var f=document.getElementById('carrie-iframe'); f.src='https://drive.google.com/file/d/1jI00bfaDOxfc-FLNnBWZwpV27ezWyLIm/preview?autoplay=1'; f.style.display='block'; this.style.display='none';">
+        <img src="/images/Tim and Carrie Testimonial Thumbnail.png" alt="Carrie testimonial" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,#f46530,#e93d3d,#6b21a8); display:flex; align-items:center; justify-content:center; padding-left:5px; box-shadow:0 4px 24px rgba(244,101,48,0.5);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+      </div>
+      <iframe id="carrie-iframe" src="" style="width:100%; height:100%; border:none; border-radius:20px; display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <p class="vsl-caption reveal">Carrie in Florida, Georgia, and the Carolinas came over from expensive strategies taught by other masterminds, implemented <strong><span class="highlight">Lead OS</span></strong>, and signed multiple contracts &mdash; closing <strong><span class="highlight">over $60K in deals</span></strong> with SMS + Emails.</p>
+
+    <!-- Clinton Video Testimonial -->
+    <div class="vsl-wrapper reveal" style="position: relative;">
+      <div id="clinton-thumbnail" style="position:absolute; inset:0; cursor:pointer; border-radius:20px; overflow:hidden; z-index:2; background:#111;" onclick="var f=document.getElementById('clinton-iframe'); f.src='https://drive.google.com/file/d/1QTfjYgL50CAc-43Ld5siF8MlDr5XlpEy/preview?autoplay=1'; f.style.display='block'; this.style.display='none';">
+        <img src="/images/Clinton-Thumbnail.png" alt="Clinton testimonial" style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,#f46530,#e93d3d,#6b21a8); display:flex; align-items:center; justify-content:center; padding-left:5px; box-shadow:0 4px 24px rgba(244,101,48,0.5);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+      </div>
+      <iframe id="clinton-iframe" src="" style="width:100%; height:100%; border:none; border-radius:20px; display:none;" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <p class="vsl-caption reveal">Clinton was in your exact shoes &mdash; not sure this would be any different from the usual noise. Here&rsquo;s what he says after joining the program.</p>
+
+    <!-- Community Testimonials -->
+    <div class="booked-proof-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/teagan-trapp.jpg" alt="Teagan Trapp">
+          <div>
+            <div class="testimonial-name">Teagan Trapp</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">From $10K/mo PPC to $0 Ad Spend</div>
+        <div class="testimonial-body">Reduced PPC spend from $10K to $0. Now closing 6 deals using nothing but courthouse data and SMS outreach. The system pays for itself in the first month.</div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/Carrie.jpeg" alt="Carrie Tyler">
+          <div>
+            <div class="testimonial-name">Carrie Tyler</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">$60K Flip Closed on Cinco de Mayo</div>
+        <div class="testimonial-body">Cinco de Mayo is &gt; when it's also closing day. Closed a $60K profit flip from texting foreclosure leads and letting AI book the appointment.</div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/Manny Madrid.jpeg" alt="Manny Madrid">
+          <div>
+            <div class="testimonial-name">Manny Madrid</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">$30K Assigned Deal in 60 Days</div>
+        <div class="testimonial-body">60 days into the program, just locked up and assigned a $30K deal. Got this with the AI texting and me calling appointments after my 9-5. Can't wait to start sending emails.</div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/tim-yee.jpg" alt="Tim Yee">
+          <div>
+            <div class="testimonial-name">Tim Yee</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">Huge Shoutout to Tim and Phil</div>
+        <div class="testimonial-body">First deal EMD submitted locked up! $15k cheque! Keep on pushing and join New Breed Investors Pro!</div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/edwin-jimenez.jpg" alt="Edwin Jimenez">
+          <div>
+            <div class="testimonial-name">Edwin Jimenez</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">Closed 2 Deals I Thought Were Dead</div>
+        <div class="testimonial-body">Just wanted to give Tim Yu a shoutout for helping me close 2 deals I thought were a lost cause. For the past year I'd been following up with 2 guys that told me "I'm not ready to sell." Tim helped me turn both into closed deals.</div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/jayme-fernandes.jpg" alt="Jayme Fernandes">
+          <div>
+            <div class="testimonial-name">Jayme Fernandes</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">Live Call Success! Feeling Unstoppable!</div>
+        <div class="testimonial-body">I've only been in the program for about a month, and started working leads around two and a half weeks ago. In my first week, the AI bot already qualified a lead and booked an appointment for us.</div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/jin-ho.jpg" alt="Jin Ho">
+          <div>
+            <div class="testimonial-name">Jin Ho</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">Win 1/1000000000000</div>
+        <div class="testimonial-body">First signed PSA, which hopefully will turn into a closed deal. Shoutout to my mentors @Tim Yu and @Phillip Thai. They not only provided me the resources, but also took time out of his day to coach me, listen to my recordings, and even close my first deal.</div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/ashton-campbell.jpg" alt="Ashton Campbell">
+          <div>
+            <div class="testimonial-name">Ashton Campbell</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">Solo Closer with AI Appointment Booking</div>
+        <div class="testimonial-body">Running a solo closer operation with AI handling appointment booking. No team overhead, no massive ad budget &mdash; just data, outbound, and systems that work on autopilot.</div>
+      </div>
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/tristan-beavers.jpg" alt="Tristan Beavers">
+          <div>
+            <div class="testimonial-name">Tristan Beavers</div>
+            <span class="testimonial-tag">General</span>
+          </div>
+        </div>
+        <div class="testimonial-title">S/o Tim the Man</div>
+        <div class="testimonial-body">Just wanted to make a quick appreciation post. Been hitting the phones hard the past couple weeks. Had a look at my KPIs with Tim and he helped me identify a couple short comings. If you track your KPIs properly, they really tell a story about your business.</div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar-img" src="/images/david-cohen.jpg" alt="David Cohen">
+          <div>
+            <div class="testimonial-name">David Cohen</div>
+            <span class="testimonial-tag">#Wins</span>
+          </div>
+        </div>
+        <div class="testimonial-title">Big Wins Over the Holidays</div>
+        <div class="testimonial-body">On my mini-vacation, I knocked out a few big wins: finished the website design and wrapped up the credibility packet. Planning to hire 2&ndash;3 sales reps next week. Looking forward to the year ahead &mdash; ready to push, build, and prosper.</div>
+      </div>
+
     </div>
   </div>
 </section>
