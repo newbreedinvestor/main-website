@@ -36,7 +36,15 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '734895069233033');
 fbq('track', 'PageView');
-fbq('track', 'Schedule');
+// Schedule is skipped if it already fired on the booking page at the moment
+// of booking (scale-session's Calendly listener sets this flag).
+try {
+  if (sessionStorage.getItem('nbi_scheduled') === '1') {
+    sessionStorage.removeItem('nbi_scheduled');
+  } else {
+    fbq('track', 'Schedule');
+  }
+} catch (e) { fbq('track', 'Schedule'); }
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"

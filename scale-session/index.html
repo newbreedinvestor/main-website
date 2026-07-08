@@ -596,5 +596,24 @@ src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"
     obs.observe(heroEl);
   }
 </script>
+<!-- Calendly booking confirmed -> dataLayer (GA4 via GTM) + Meta conversion -->
+<script>
+(function () {
+  function isCalendlyEvent(e) {
+    return e.data && typeof e.data.event === 'string' && e.data.event.indexOf('calendly') === 0;
+  }
+  window.addEventListener('message', function (e) {
+    if (!isCalendlyEvent(e)) return;
+    if (e.data.event === 'calendly.event_scheduled') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'book_call_completed', booking_source: 'scale-session' });
+      if (typeof fbq === 'function') { fbq('track', 'Schedule'); }
+      // Tells the booked page Schedule already fired, so a post-booking
+      // redirect there won't double-count.
+      try { sessionStorage.setItem('nbi_scheduled', '1'); } catch (err) {}
+    }
+  });
+})();
+</script>
 </body>
 </html>
