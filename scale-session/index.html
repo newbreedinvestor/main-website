@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KGTLBKV6');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x556suj2xr");
+    </script>
+    <!-- End Microsoft Clarity -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Your Scaling Session | New Breed Investors</title>
 <meta name="description" content="45–60 minutes to map a Niche Data + Outbound + AI plan for your market. Book your free Scaling Session with New Breed Investors.">
+<meta property="og:title" content="Book Your Scaling Session | New Breed Investors">
+<meta property="og:description" content="45-60 minutes to map a Niche Data + Outbound + AI plan for your market.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://newbreedinvestor.io/scale-session/">
+<meta property="og:image" content="https://newbreedinvestor.io/images/tim-speaking.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -25,228 +47,7 @@ src="https://www.facebook.com/tr?id=734895069233033&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <style>
 /* ============================================
-   BASE — NBI Brand Tokens
-   ============================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  --orange: #f46530;
-  --red: #e93d3d;
-  --purple: #6b21a8;
-  --purple-deep: #4c1d95;
-  --dark: #0f0f1a;
-  --dark-card: #1a1a2e;
-  --dark-lighter: #252540;
-  --text-white: #f5f5f5;
-  --text-muted: rgba(255,255,255,0.6);
-  --text-dark: #1a1a1a;
-  --text-dark-muted: #666;
-  --gradient-main: linear-gradient(135deg, #f46530, #e93d3d, #6b21a8);
-  --gradient-subtle: linear-gradient(135deg, rgba(244,101,48,0.15), rgba(107,33,168,0.15));
-  --gradient-border: linear-gradient(135deg, #f46530, #e93d3d, #6b21a8);
-  --glow-orange: rgba(244,101,48,0.4);
-  --glow-purple: rgba(107,33,168,0.3);
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--dark);
-  color: var(--text-white);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
-
-/* ---- Keyframes ---- */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-@keyframes glow {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
-@keyframes meshMove {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -30px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.95); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-
-/* ---- Scroll Reveal ---- */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-
-/* ---- Utilities ---- */
-.gradient-text {
-  background: var(--gradient-main);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 4s ease infinite;
-}
-.section-eyebrow {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  color: var(--orange);
-}
-
-/* ---- Mesh Orbs ---- */
-.mesh-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  pointer-events: none;
-}
-.orb-1 { width: 400px; height: 400px; background: var(--orange); opacity: 0.2; top: 10%; right: 5%; animation: meshMove 10s ease-in-out infinite; }
-.orb-2 { width: 350px; height: 350px; background: var(--purple); opacity: 0.15; bottom: 5%; left: 10%; animation: meshMove 14s ease-in-out infinite reverse; }
-.orb-3 { width: 200px; height: 200px; background: var(--red); opacity: 0.12; top: 50%; left: 40%; animation: meshMove 8s ease-in-out infinite; }
-
-/* ---- Hero Badge ---- */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  background: var(--gradient-subtle);
-  border: 1px solid rgba(244,101,48,0.3);
-  border-radius: 100px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--orange);
-  margin-bottom: 28px;
-  backdrop-filter: blur(10px);
-}
-.live-dot {
-  width: 8px; height: 8px;
-  background: var(--orange);
-  border-radius: 50%;
-  animation: glow 2s ease infinite;
-  box-shadow: 0 0 12px var(--glow-orange);
-}
-
-/* ---- Buttons ---- */
-.btn-gradient {
-  display: inline-block;
-  padding: 16px 40px;
-  background: var(--gradient-main);
-  background-size: 200% auto;
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.3s, background-position 0.5s;
-}
-.btn-gradient:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px var(--glow-orange), 0 4px 15px var(--glow-purple);
-  background-position: right center;
-}
-.btn-white {
-  display: inline-block;
-  padding: 20px 56px;
-  background: #fff;
-  color: var(--dark);
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.3s;
-  text-decoration: none;
-}
-.btn-white:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-}
-
-/* ---- Sticky CTA Bar ---- */
-.cta-bar {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  padding: 14px 24px;
-  background: rgba(15,15,26,0.92);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  display: flex;
-  justify-content: center;
-  z-index: 100;
-  transform: translateY(100%);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.cta-bar.visible { transform: translateY(0); }
-.cta-bar a {
-  padding: 12px 40px;
-  background: var(--gradient-main);
-  background-size: 200% auto;
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-position 0.5s;
-  text-decoration: none;
-}
-.cta-bar a:hover { background-position: right center; }
-
-/* ---- Final CTA ---- */
-.final-cta {
-  padding: 120px 24px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: var(--gradient-main);
-  background-size: 200% 200%;
-  animation: gradientShift 6s ease infinite;
-}
-.final-cta::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.2) 100%);
-}
-.final-cta-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
-.final-cta h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin-bottom: 16px; color: #fff; }
-.final-cta p { color: rgba(255,255,255,0.85); margin-bottom: 36px; font-size: 1.1rem; }
-
-/* ---- Footer ---- */
-.footer {
-  background: var(--dark);
-  text-align: center;
-  padding: 40px 24px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-/* ============================================
-   SCALE SESSION — PAGE STYLES
+   SCALE SESSION PAGE
    ============================================ */
 
 /* Hero */
@@ -286,6 +87,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   flex-direction: column;
   gap: 12px;
   text-align: left;
+  margin-bottom: 0;
 }
 .ss-bullet-list li {
   display: flex;
@@ -298,7 +100,8 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 .ss-bullet-list li strong { color: var(--text-white); }
 .ss-bullet-check {
   flex-shrink: 0;
-  width: 22px; height: 22px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: var(--gradient-main);
   display: inline-flex;
@@ -315,7 +118,10 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   color: var(--text-dark);
   padding: 40px 24px 52px;
 }
-.ss-calendar-inner { max-width: 860px; margin: 0 auto; }
+.ss-calendar-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
 .ss-calendar-anchor {
   text-align: center;
   font-size: 1rem;
@@ -382,7 +188,8 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 .ss-for-list li strong { color: var(--text-white); }
 .ss-for-icon {
   flex-shrink: 0;
-  width: 24px; height: 24px;
+  width: 24px;
+  height: 24px;
   border-radius: 8px;
   background: var(--gradient-main);
   display: inline-flex;
@@ -413,7 +220,11 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   color: var(--text-dark);
   padding: 56px 24px;
 }
-.ss-what-happens-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+.ss-what-happens-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
 .ss-what-happens h2 {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
@@ -442,10 +253,14 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s;
   text-align: left;
 }
-.ss-steps-list li:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.08); }
+.ss-steps-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.08);
+}
 .ss-step-num {
   flex-shrink: 0;
-  width: 36px; height: 36px;
+  width: 36px;
+  height: 36px;
   border-radius: 10px;
   background: var(--gradient-main);
   display: flex;
@@ -479,7 +294,6 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  text-align: center;
 }
 .ss-proof h2 {
   font-size: clamp(1.5rem, 2.8vw, 2rem);
@@ -493,16 +307,18 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   gap: 18px;
 }
 .ss-proof-card {
-  padding: 24px;
+  padding: 28px 24px;
   border-radius: 18px;
   background: var(--dark-card);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.07);
   position: relative;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s;
-  text-align: left;
 }
-.ss-proof-card:hover { transform: translateY(-5px); border-color: rgba(244,101,48,0.25); }
+.ss-proof-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(244,101,48,0.25);
+}
 .ss-proof-card::after {
   content: '';
   position: absolute;
@@ -513,25 +329,15 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   transition: opacity 0.3s;
 }
 .ss-proof-card:hover::after { opacity: 1; }
-.ss-proof-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-.ss-proof-avatar-img {
-  width: 38px; height: 38px;
-  border-radius: 10px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.ss-proof-person-name {
+.ss-proof-name {
+  font-family: 'Outfit', sans-serif;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-white);
+  margin-bottom: 4px;
 }
-.ss-proof-tag {
-  font-size: 0.7rem;
+.ss-proof-market {
+  font-size: 0.72rem;
   font-weight: 600;
   color: var(--orange);
   background: rgba(244,101,48,0.1);
@@ -539,28 +345,25 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   padding: 2px 10px;
   border-radius: 6px;
   display: inline-block;
-  margin-top: 3px;
+  margin-bottom: 14px;
 }
-.ss-proof-card-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-white);
-  margin-bottom: 8px;
-}
-.ss-proof-card-body {
+.ss-proof-card p {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.65;
 }
+.ss-proof-card p strong { color: var(--orange); }
 
-/* Homework */
+/* Homework / Before The Call */
 .ss-homework {
   background: #fafafa;
   color: var(--text-dark);
   padding: 56px 24px;
 }
-.ss-homework-inner { max-width: 660px; margin: 0 auto; text-align: center; }
+.ss-homework-inner {
+  max-width: 660px;
+  margin: 0 auto;
+}
 .ss-homework h2 {
   font-size: clamp(1.5rem, 2.8vw, 2rem);
   font-weight: 800;
@@ -591,28 +394,36 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   font-size: 0.95rem;
   color: var(--text-dark-muted);
   line-height: 1.6;
-  text-align: left;
 }
 .ss-homework-list li strong { color: var(--text-dark); }
-.ss-hw-icon { flex-shrink: 0; font-size: 1.1rem; margin-top: 1px; }
+.ss-hw-icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 1px;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
   .ss-proof-grid { grid-template-columns: 1fr; }
   .ss-hero { padding: 56px 20px 48px; }
+  .ss-hero h1 { letter-spacing: -0.02em; }
   .ss-bullet-list { width: 100%; }
 }
 </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGTLBKV6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 <!-- ============ 1. HERO ============ -->
-<section class="ss-hero" id="hero">
+<section class="ss-hero">
   <div class="mesh-orb orb-1"></div>
   <div class="mesh-orb orb-2"></div>
   <div class="mesh-orb orb-3"></div>
   <div class="ss-hero-inner">
-    <div class="hero-badge"><span class="live-dot"></span> Free &bull; Limited Spots</div>
+    <div class="hero-badge" style="margin-bottom: 28px;"><span class="live-dot"></span> Free &bull; Limited Spots</div>
     <h1>Book Your <span class="gradient-text">3&ndash;5 Deals/Month</span> Scaling Session</h1>
     <p class="ss-hero-sub">30&ndash;45 minutes to map a Niche Data + Outbound + AI plan for your market.</p>
     <ul class="ss-bullet-list">
@@ -637,20 +448,18 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   <div class="ss-calendar-inner">
     <p class="ss-calendar-anchor">Choose a time below that you can be focused and distraction&#8209;free.</p>
     <div class="ss-calendar-wrapper reveal">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=f46530&utm_source=newbreed-site&utm_medium=calendly-embed&utm_campaign=scale-session&utm_content=scale-session-page" style="min-width:320px;height:700px;"></div>
+      <!-- Calendly inline embed -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/nbinvestor/newbreed-strategy-session-clone?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=f46530" style="min-width:320px;height:700px;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
-    <p style="text-align:center;font-size:0.82rem;color:#999;margin-top:18px;">
-      Spots are limited. If you don&rsquo;t see a time that works, check back &mdash; we release new availability weekly.
-    </p>
   </div>
 </section>
 
 <!-- ============ 3. WHO THIS IS FOR ============ -->
 <section class="ss-qualify">
-  <div class="mesh-orb" style="width:320px;height:320px;background:var(--purple);opacity:0.12;top:5%;right:-8%;animation:meshMove 14s ease-in-out infinite;"></div>
+  <div class="mesh-orb" style="width: 320px; height: 320px; background: var(--purple); opacity: 0.12; top: 5%; right: -8%; animation: meshMove 14s ease-in-out infinite;"></div>
   <div class="ss-qualify-inner">
-    <p class="section-eyebrow reveal">Qualify Yourself</p>
+    <p class="section-eyebrow gradient reveal">Qualify Yourself</p>
     <h2 class="reveal">Who this call is for</h2>
     <ul class="ss-for-list">
       <li class="reveal">
@@ -659,11 +468,11 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
       </li>
       <li class="reveal reveal-delay-1">
         <span class="ss-for-icon">&#10003;</span>
-        <span>You&rsquo;re <strong>tired of gambling on PPC/PPL</strong> or generic inbound leads.</span>
+        <span>You're <strong>tired of gambling on PPC/PPL</strong> or generic inbound leads.</span>
       </li>
       <li class="reveal reveal-delay-2">
         <span class="ss-for-icon">&#10003;</span>
-        <span>You&rsquo;re willing to <strong>follow a system</strong> and put in a few focused hours per week.</span>
+        <span>You're willing to <strong>follow a system</strong> and put in a few focused hours per week.</span>
       </li>
     </ul>
     <div class="ss-not-for reveal">
@@ -675,7 +484,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 <!-- ============ 4. WHAT HAPPENS ON THE CALL ============ -->
 <section class="ss-what-happens">
   <div class="ss-what-happens-inner">
-    <p class="section-eyebrow reveal">No Surprises</p>
+    <p class="section-eyebrow gradient reveal" style="color: var(--orange);">No Surprises</p>
     <h2 class="reveal">What will happen on your Scaling Session</h2>
     <ol class="ss-steps-list">
       <li class="reveal">
@@ -699,44 +508,30 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 
 <!-- ============ 5. MICRO-PROOF STRIP ============ -->
 <section class="ss-proof">
-  <div class="mesh-orb" style="width:340px;height:340px;background:var(--orange);opacity:0.09;bottom:5%;left:-8%;animation:meshMove 12s ease-in-out infinite reverse;"></div>
+  <div class="mesh-orb" style="width: 340px; height: 340px; background: var(--orange); opacity: 0.09; bottom: 5%; left: -8%; animation: meshMove 12s ease-in-out infinite reverse;"></div>
   <div class="ss-proof-inner">
-    <p class="section-eyebrow reveal">Real Results</p>
+    <p class="section-eyebrow gradient reveal">Real Results</p>
     <h2 class="reveal">A few quick wins from this system</h2>
     <div class="ss-proof-grid">
+
       <div class="ss-proof-card reveal">
-        <div class="ss-proof-header">
-          <img class="ss-proof-avatar-img" src="../images/teagan-trapp.jpg" alt="Teagan Trapp">
-          <div>
-            <div class="ss-proof-person-name">Teagan Trapp</div>
-            <span class="ss-proof-tag">Canada &mdash; Virtual Wholesaling</span>
-          </div>
-        </div>
-        <div class="ss-proof-card-title">~$100K in Assignments, Zero Ad Spend</div>
-        <div class="ss-proof-card-body">6 months cold&#8209;calling generic data, 0 deals. Switched to niche probate + AI follow&#8209;up. Stacked ~$100K in assignments and quit his factory job in 2025.</div>
+        <div class="ss-proof-name">Teagan Trapp</div>
+        <span class="ss-proof-market">Canada &mdash; Virtual Wholesaling</span>
+        <p>6 months cold&#8209;calling generic data, <strong>0 deals</strong>. Switched to niche probate + AI follow&#8209;up. Stacked <strong>~$100K in assignments</strong> and quit his factory job in 2025.</p>
       </div>
+
       <div class="ss-proof-card reveal reveal-delay-1">
-        <div class="ss-proof-header">
-          <img class="ss-proof-avatar-img" src="../images/Carrie.jpeg" alt="Carrie Tyler">
-          <div>
-            <div class="ss-proof-person-name">Carrie Tyler</div>
-            <span class="ss-proof-tag">Wholesaling / Flipping</span>
-          </div>
-        </div>
-        <div class="ss-proof-card-title">$60K Flip Closed on Cinco de Mayo</div>
-        <div class="ss-proof-card-body">Texted foreclosure leads, let AI book the appointment. Closed a $60K profit flip &mdash; on Cinco de Mayo, which also turned out to be closing day.</div>
+        <div class="ss-proof-name">Carrie Tyler</div>
+        <span class="ss-proof-market">Wholesaling / Flipping</span>
+        <p>Texted foreclosure leads, let AI book the appointment. Closed a <strong>$60K profit flip</strong> &mdash; on Cinco de Mayo, which also turned out to be closing day.</p>
       </div>
+
       <div class="ss-proof-card reveal reveal-delay-2">
-        <div class="ss-proof-header">
-          <img class="ss-proof-avatar-img" src="../images/Nick Patel.jpg" alt="Nick Patel">
-          <div>
-            <div class="ss-proof-person-name">Nick Patel</div>
-            <span class="ss-proof-tag">Lead OS &mdash; Foreclosure</span>
-          </div>
-        </div>
-        <div class="ss-proof-card-title">Two Foreclosure Sellers on the Hook</div>
-        <div class="ss-proof-card-body">Got two sellers on the hook from Lead OS, we have been following up for about a month &mdash; both leads are in foreclosure.</div>
+        <div class="ss-proof-name">Manny Madrid</div>
+        <span class="ss-proof-market">Wholesaling &mdash; W2 + Part&#8209;Time</span>
+        <p>60 days into the program. AI texting after his 9&#8209;5, he called the appointments. <strong>Locked and assigned a $30K deal</strong> before he even started the email campaigns.</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -744,9 +539,9 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 <!-- ============ 6. BEFORE THE CALL ============ -->
 <section class="ss-homework">
   <div class="ss-homework-inner">
-    <p class="section-eyebrow reveal">Show Up Ready</p>
+    <p class="section-eyebrow gradient reveal" style="color: var(--orange);">Show Up Ready</p>
     <h2 class="reveal">Before our call</h2>
-    <p class="ss-homework-sub reveal">The more prepared you are, the more useful the session. Takes 5 minutes to think through:</p>
+    <p class="ss-homework-sub reveal">The more prepared you are, the more useful the session is. Takes 5 minutes to think through:</p>
     <ul class="ss-homework-list">
       <li class="reveal">
         <span class="ss-hw-icon">&#128202;</span>
@@ -772,30 +567,27 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 <section class="final-cta">
   <div class="final-cta-inner reveal">
     <h2>Ready to Map Your Deal&#8209;Flow System?</h2>
-    <p>Spots go fast. Pick a time above while it&rsquo;s still open.</p>
-    <a href="#" onclick="document.querySelector('.ss-calendar-wrapper').scrollIntoView({behavior:'smooth',block:'start'});return false;" class="btn-white">Book My Scaling Session</a>
+    <p>Spots go fast after each training. Pick a time above while it&rsquo;s still open.</p>
+    <a href="#" onclick="document.querySelector('.ss-calendar-wrapper').scrollIntoView({behavior:'smooth', block:'start'}); return false;" class="btn-white">Book My Scaling Session</a>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-  <p>&copy; 2025 New Breed Investors, Inc. All rights reserved.</p>
+  <p>&copy; 2026 New Breed Investors, Inc. All rights reserved.</p>
+  <p style="max-width: 720px; margin: 14px auto 0; font-size: 0.75rem; line-height: 1.6; opacity: 0.65;">Earnings Disclaimer: The results and testimonials shared on this page reflect individual experiences and are not typical. They are not a promise or guarantee of your results. Real estate investing involves risk and requires effort, and many factors outside our control affect outcomes. We make no claim that you will earn any specific amount, or any money at all, from our free training or paid programs.</p>
+  <p style="margin-top: 10px; font-size: 0.78rem;"><a href="/privacy.html" style="color: inherit;">Privacy Policy</a> &middot; <a href="/terms.html" style="color: inherit;">Terms of Service</a></p>
 </footer>
 
 <!-- Sticky CTA Bar -->
 <div class="cta-bar" id="ctaBar">
-  <a href="#" onclick="document.querySelector('.ss-calendar-wrapper').scrollIntoView({behavior:'smooth',block:'start'});return false;">Book My Scaling Session</a>
+  <a href="#" onclick="document.querySelector('.ss-calendar-wrapper').scrollIntoView({behavior:'smooth', block:'start'}); return false;">Book My Scaling Session</a>
 </div>
 
+<script src="/animations.js"></script>
 <script>
-  // Scroll reveal
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-  // Sticky CTA bar after hero scrolls out
-  const heroEl = document.getElementById('hero');
+  // Override sticky bar trigger — use first section as anchor
+  const heroEl = document.querySelector('.ss-hero');
   const ctaBarEl = document.getElementById('ctaBar');
   if (heroEl && ctaBarEl) {
     const obs = new IntersectionObserver((entries) => {
@@ -803,21 +595,6 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
     }, { threshold: 0 });
     obs.observe(heroEl);
   }
-
-  // Calendly booking confirmed -> dataLayer (GA4 via GTM) + Meta conversion
-  (function () {
-    function isCalendlyEvent(e) {
-      return e.data && typeof e.data.event === 'string' && e.data.event.indexOf('calendly') === 0;
-    }
-    window.addEventListener('message', function (e) {
-      if (!isCalendlyEvent(e)) return;
-      if (e.data.event === 'calendly.event_scheduled') {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'book_call_completed', booking_source: 'scale-session-page' });
-        if (typeof fbq === 'function') { fbq('track', 'Schedule'); }
-      }
-    });
-  })();
 </script>
 </body>
 </html>
