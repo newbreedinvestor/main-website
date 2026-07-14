@@ -152,6 +152,9 @@ if (registrationForm) {
     params.append('last_name', formData.get('last_name'));
     params.append('email', formData.get('email'));
     params.append('phone', formData.get('phone'));
+    params.append('consent', formData.get('consent') ? 'yes' : 'no');
+    const isVip = formData.get('vip') === 'yes';
+    params.append('vip', isVip ? 'yes' : 'no');
 
     try {
       await fetch('https://services.leadconnectorhq.com/hooks/DtZlCxzIoAvbNURI3XeL/webhook-trigger/55786e7f-1752-4720-8583-cb2f6fb7e6d9', {
@@ -160,8 +163,8 @@ if (registrationForm) {
         mode: 'no-cors'
       });
 
-      // Redirect to thank-you page
-      window.location.href = 'thankyou.html';
+      // VIP opt-in -> $27 upsell page; everyone else -> thank-you page
+      window.location.href = isVip ? 'vip/' : 'thankyou.html';
     } catch (err) {
       // Even with no-cors, fetch won't throw on success
       // If we get here, there's a real network error
